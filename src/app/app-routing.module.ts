@@ -54,7 +54,10 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [
+    // RouterModule.forRoot(appRoutes, { useHash: true }) // using hash mode so server just send index file and we handel routing in the client side
+    RouterModule.forRoot(appRoutes),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
